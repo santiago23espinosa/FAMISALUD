@@ -1,33 +1,30 @@
 import React from 'react';
-import './App.css';
 import Encabezado from './componentes/Encabezado/Encabezado';
 import Productos from './componentes/Productos/Productos';
 import Servicios from './componentes/Servicios/Servicios';
 import Contacto from './componentes/Contacto/Contacto';
-import PiePagina from './componentes/PiePagina/PiePagina';
-import Buscador from './componentes/Buscador/Buscador';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Encabezado />
       <main>
-      <section id="buscador">
-          <Buscador />
+        <section id="inicio" className="hero">
+          <div className="hero-content">
+            <p>Tu farmacia de confianza en línea</p>
+            <a href="#productos" className="cta-button">Ver Productos</a>
+          </div>
         </section>
-      
-        <section id="productos">
-          <Productos />
-        </section>
-        <section id="servicios">
-          <Servicios />
-        </section>
-        <section id="contacto">
-          <Contacto />
-        </section>
+        <Productos />
+        <Servicios />
+        <Contacto />
       </main>
-      <PiePagina />
-      
+      <footer>
+        <p>Politicas de privacidad      Terminos y condiciones.</p>
+        <p>&copy; FAMISALUD 2024 - . Todos los derechos reservados.</p>
+        <p>Desarrollado por Santiago Espinosa Ordoñez.</p>
+      </footer>
     </div>
   );
 }

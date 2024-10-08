@@ -1,22 +1,61 @@
+:root {
+  --primary-color: #4CAF50;
+  --primary-light: #80E27E;
+  --primary-dark: #087F23;
+  --secondary-color: #FFC107;
+  --text-color: #212121;
+  --background-color: #FFFFFF;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
-  color: #212121;
-}
-
-.App {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-header {
-  background-color: #4CAF50;
-  padding: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 main {
-  padding-top: 2rem;
+  padding-top: 100px;
+}
+
+.hero {
+  height: 50vh;
+  background-image: url('/images/inicio1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-dark);
+}
+
+footer {
+  background-color: var(--primary-dark);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
 }
