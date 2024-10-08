@@ -6,7 +6,7 @@ const Encabezado = () => {
     <header className="Encabezado">
       <nav>
         <div className="logo">
-          <img src="FAMISALUD/images/logo3.png" alt="FAMISALUD Logo" />
+          <img src="images/logo3.png" alt="FAMISALUD Logo" />
         </div>
         <ul className="centered-menu">
           <li><a href="#productos">Productos</a></li>
