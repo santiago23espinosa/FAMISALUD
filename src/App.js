@@ -5,12 +5,17 @@ import Productos from './componentes/Productos/Productos';
 import Servicios from './componentes/Servicios/Servicios';
 import Contacto from './componentes/Contacto/Contacto';
 import PiePagina from './componentes/PiePagina/PiePagina';
+import Buscador from './componentes/Buscador/Buscador';
 
 function App() {
   return (
     <div className="App">
       <Encabezado />
       <main>
+      <section id="buscador">
+          <Buscador />
+        </section>
+      
         <section id="productos">
           <Productos />
         </section>
