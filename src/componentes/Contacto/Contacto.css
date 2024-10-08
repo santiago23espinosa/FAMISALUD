@@ -1,0 +1,14 @@
+.Contacto {
+    padding: 1rem;
+  }
+  
+  .Contacto input {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  .Contacto button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
