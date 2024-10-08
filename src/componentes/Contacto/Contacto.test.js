@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import Contacto from './Contacto';
 
-test('renders contact form', () => {
-  render(<Contacto />);
-  const submitButton = screen.getByText(/Enviar/i);
-  expect(submitButton).toBeInTheDocument();
-});
+describe('Contacto Component', () => {
+  test('renders all form inputs', () => {
+    render(<Contacto />);
+    expect(screen.getByPlaceholderText('Nombre')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Celular')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Correo electrónico')).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('Mensaje')).toBeInTheDocument();
+  });
+
+  test('form submission works correctly', () => {
+    const { getByPlaceholderText, getByText } = render(<Contact

@@ -5,10 +5,11 @@
   width: 100%;
   background-color: var(--primary-color);
   z-index: 1000;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 nav {
+  font-size: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,13 +17,13 @@ nav {
 
 .logo {
   position: absolute;
-  right: 5rem;
+  right: 20 rem;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .logo img {
-  height: 70px;
+  height: 100px;
   width: auto;
 }
 
@@ -36,7 +37,7 @@ nav {
 }
 
 .centered-menu li {
-  margin-left: 1rem;
+  margin-left: 5rem;
 }
 
 .centered-menu li a {
