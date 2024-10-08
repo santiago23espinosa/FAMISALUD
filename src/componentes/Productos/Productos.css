@@ -1,0 +1,12 @@
+.Productos {
+    padding: 1rem;
+  }
+  
+  .Productos ul {
+    list-style-type: none;
+  }
+  
+  .Productos li {
+    margin-bottom: 0.5rem;
+  }
+  
