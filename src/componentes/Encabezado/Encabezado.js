@@ -1,20 +1,24 @@
 import React from 'react';
-import './Header.css';
+import { Link } from 'react-router-dom';
+import './Encabezado.css';
 
-const Header = () => {
+function Encabezado() {
   return (
-    <header className="header">
-      <img src="FAMISALUD/images/logo3.png" alt="FAMISALUD Logo" />
+    <header className="encabezado-fijo">
       <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
+        <div className="logo">
+          <img src="/imagenes/logo3.png" alt="Logo FAMISALUD" />
+        </div>
+        <ul className="menu-centrado">
+          <li><Link to="/">Inicio</Link></li>
           <li><a href="#productos">Productos</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#contacto">Contacto</a></li>
+          <li><Link to="/admin">Admin</Link></li>
         </ul>
       </nav>
     </header>
   );
-};
+}
 
-export default Header;
+export default Encabezado;

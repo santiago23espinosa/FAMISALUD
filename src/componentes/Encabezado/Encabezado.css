@@ -1,25 +1,60 @@
-.fixed-header {
-  background-color: #fff;
-  padding: 10px 0;
-  box-shadow: 0 4px 2px -2px gray;
+.encabezado-fijo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-primario);
+  z-index: 1000;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo img {
   height: 50px;
+  width: auto;
 }
 
-.centered-menu {
+.menu-centrado {
   display: flex;
-  justify-content: center;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.centered-menu li {
-  margin: 0 15px;
+.menu-centrado li {
+  margin: 0 1rem;
 }
 
-.centered-menu a {
+.menu-centrado a {
+  color: white;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu-centrado a:hover {
+  color: var(--color-secundario);
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  
+  .menu-centrado {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+  }
 }
