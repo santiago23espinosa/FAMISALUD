@@ -1,24 +1,25 @@
 import React from 'react';
-import Encabezado from './components/Encabezado/Encabezado';
-import MenuNavegacion from './components/MenuNavegacion/MenuNavegacion';
-import SeccionInicio from './components/SeccionInicio/SeccionInicio';
-import SeccionProductos from './components/SeccionProductos/SeccionProductos';
-import SeccionServicios from './components/SeccionServicios/SeccionServicios';
-import FormularioContacto from './components/FormularioContacto/FormularioContacto';
-import PiePagina from './components/PiePagina/PiePagina';
 import './App.css';
+import Encabezado from './componentes/Encabezado/Encabezado';
+import Productos from './componentes/Productos/Productos';
+import Servicios from './componentes/Servicios/Servicios';
+import Contacto from './componentes/Contacto/Contacto';
 
 function App() {
   return (
     <div className="App">
       <Encabezado />
       <main>
-        <SeccionInicio />
-        <SeccionProductos />
-        <SeccionServicios />
-        <FormularioContacto />
+        <section id="productos">
+          <Productos />
+        </section>
+        <section id="servicios">
+          <Servicios />
+        </section>
+        <section id="contacto">
+          <Contacto />
+        </section>
       </main>
-      <PiePagina />
     </div>
   );
 }
