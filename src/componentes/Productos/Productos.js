@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Productos.css';
 
+
 const productosData = [
   { 
     nombre: "ACETAMINOFEN", 
@@ -26,7 +27,31 @@ const productosData = [
     precioActual: 1200,
     imagen: "/images/producto4.jpg"
   },
-  // ... otros productos
+  { 
+    nombre: "ASPIRINA", 
+    precioAnterior: 4000, 
+    precioActual: 3500,
+    imagen: "images/producto5.jpg"
+},
+{ 
+    nombre: "OMEPREZOL", 
+    precioAnterior: 2200, 
+    precioActual: 1800,
+    imagen: "images/producto6.jpg"
+},
+{ 
+    nombre: "AZITROMICINA", 
+    precioAnterior: 1800, 
+    precioActual: 1400,
+    imagen: "images/producto7.jpg"
+},
+{ 
+    nombre: "DICLOFENACO", 
+    precioAnterior: 3500, 
+    precioActual: 3000,
+    imagen: "images/producto8.jpg"
+}
+  
 ];
 
 function Productos() {

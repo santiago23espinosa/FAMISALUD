@@ -1,12 +1,12 @@
 import React from 'react';
 import './Encabezado.css';
-
+import logo from '../images/logo3.png'; // 
 function Encabezado() {
   return (
     <header className="fixed-header">
       <nav>
         <div className="logo">
-          <img src="/images/logo3" alt="FAMISALUD Logo" />
+          <img src={logo} alt="FAMISALUD Logo" />
         </div>
         <ul className="centered-menu">
           <li><a href="#inicio" data-color="#E6F3FF">Inicio</a></li>

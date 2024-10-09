@@ -1,20 +1,36 @@
 import React from 'react';
-import './ProductoIndividual.css';
+import ProductoIndividual from '../ProductoIndividual/ProductoIndividual';
+import './Productos.css';
 
-function ProductoIndividual({ producto }) {
+const productos = [
+  { 
+    nombre: "ACETAMINOFEN", 
+    precioAnterior: 2000, 
+    precioActual: 1500,
+    imagen: "/images/producto1.jpg",
+    descripcion: "Analgésico y antipirético de uso común."
+  },
+  { 
+    nombre: "IBUPROFENO", 
+    precioAnterior: 2500, 
+    precioActual: 1800,
+    imagen: "/images/producto2.jpg",
+    descripcion: "Antiinflamatorio no esteroideo (AINE) utilizado para reducir el dolor y la inflamación."
+  },
+  // ... Agrega el resto de los productos aquí
+];
+
+const Productos = () => {
   return (
-    <div className="producto-individual">
-      <img src={producto.imagen} alt={producto.nombre} />
-      <h3>{producto.nombre}</h3>
-      <p className="price">
-        {producto.precioAnterior && (
-          <span className="original-price">${producto.precioAnterior.toFixed(2)}</span>
-        )}
-        <span className="discount-price">${producto.precioActual.toFixed(2)}</span>
-      </p>
-      <button>Agregar al carrito</button>
-    </div>
+    <section id="productos" className="productos">
+      <h2>Nuestros Productos</h2>
+      <div className="product-grid">
+        {productos.map((producto, index) => (
+          <ProductoIndividual key={index} producto={producto} />
+        ))}
+      </div>
+    </section>
   );
-}
+};
 
-export default ProductoIndividual;
+export default Productos;
