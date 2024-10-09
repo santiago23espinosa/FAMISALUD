@@ -1,36 +1,31 @@
 import React from 'react';
-import ProductoIndividual from '../ProductoIndividual/ProductoIndividual';
-import './Productos.css';
+import './ProductoIndividual.css';
 
-const productos = [
-  { 
-    nombre: "ACETAMINOFEN", 
-    precioAnterior: 2000, 
-    precioActual: 1500,
-    imagen: "/images/producto1.jpg",
-    descripcion: "Analgésico y antipirético de uso común."
-  },
-  { 
-    nombre: "IBUPROFENO", 
-    precioAnterior: 2500, 
-    precioActual: 1800,
-    imagen: "/images/producto2.jpg",
-    descripcion: "Antiinflamatorio no esteroideo (AINE) utilizado para reducir el dolor y la inflamación."
-  },
-  // ... Agrega el resto de los productos aquí
-];
+function ProductoIndividual({ producto, onAddToCart }) {
+  const { nombre, imagen, precioActual, precioAnterior, descripcion } = producto;
 
-const Productos = () => {
   return (
-    <section id="productos" className="productos">
-      <h2>Nuestros Productos</h2>
-      <div className="product-grid">
-        {productos.map((producto, index) => (
-          <ProductoIndividual key={index} producto={producto} />
-        ))}
+    <div className="producto-individual">
+      <div className="producto-imagen">
+        <img src={imagen} alt={nombre} />
       </div>
-    </section>
+      <div className="producto-info">
+        <h2>{nombre}</h2>
+        <div className="producto-precios">
+          {precioAnterior && precioAnterior > precioActual && (
+            <span className="precio-anterior">${precioAnterior.toFixed(2)}</span>
+          )}
+          <span className="precio-actual">${precioActual.toFixed(2)}</span>
+        </div>
+        <p className="producto-descripcion">{descripcion}</p>
+        <div className="producto-acciones">
+          <button onClick={() => onAddToCart(producto)} className="btn-agregar">
+            Agregar al carrito
+          </button>
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
-export default Productos;
+export default ProductoIndividual;
